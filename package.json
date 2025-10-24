@@ -104,3 +104,27 @@
     "bufferutil": "^4.0.8"
   }
 }
+
+{
+  "name": "glucosense",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+    // mantenha as outras dependências do seu projeto aqui
+  },
+  "devDependencies": {
+    "vite": "^5.4.19",
+    "esbuild": "^0.25.0",
+    "typescript": "5.6.3"
+    // mantenha os outros devDependencies
+  }
+}
+
