@@ -3,20 +3,13 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
-// Plugin opcional do Replit Cartographer
-let cartographerPlugin = [];
-if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
-  import("@replit/vite-plugin-cartographer").then((m) => {
-    cartographerPlugin = [m.cartographer()];
-  });
-}
-
-// Configuração principal do Vite
+// Configuração do Vite
 export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
-    ...cartographerPlugin,
+    // Removido await import para evitar erro de sintaxe
+    // Se precisar do Cartographer no Replit, podemos adicionar depois de forma async
   ],
   resolve: {
     alias: {
