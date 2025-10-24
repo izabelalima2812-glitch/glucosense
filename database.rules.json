@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "users": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["email"]
+    },
+    "glucose-readings": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["userId", "timestamp"]
+    },
+    "sensor-data": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["userId"]
+    },
+    "events": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["userId", "timestamp"]
+    }
+  }
+}
